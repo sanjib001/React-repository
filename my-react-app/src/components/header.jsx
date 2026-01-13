@@ -1,11 +1,13 @@
-import Logo from './logo'
-import Navbar from './navbar'
+// import Logo from './logo' //default import
+import { Logo } from './logo'
+import MyNavbar from './navbar'
+
 
 const Header = () => {
     return (
-        <header style={{ display: 'flex', alignItems: 'center'}}>
+        <header style={{ display: 'flex', alignItems: 'center' }}>
             <Logo />
-            <Navbar />
+            <MyNavbar />
         </header>
     )
 }
