@@ -5,6 +5,7 @@ import Counter from './components/counter'
 import Input from './components/input'
 import Logo from './components/logo'
 import Navbar from './components/navbar'
+import "./index.css"
 
 function App() {
 

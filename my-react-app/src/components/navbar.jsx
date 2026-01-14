@@ -1,3 +1,5 @@
+// import "./navbar.css";
+import styles from "./navbar.module.css";
 const Navbar = (props) => {
     // const navItems = [
     //     { url: "/home", label: "Home" },
@@ -6,16 +8,20 @@ const Navbar = (props) => {
     // ]
     const { navItems } = props;
     return (
-        <nav>
-            <ul style={{ display: "flex", listStyle: "none" }}>
-                {navItems.map((navItem, index) => (
-                    <li key={index}>
-                        <a href={navItem.url} style={{ color: "white" }}>{navItem.label}</a>
-                    </li>
-                ))}
+        // <div className="header">
+        <div className= {styles["header"]}>
+            <nav>
+                <ul style={{ display: "flex", listStyle: "none" }}>
+                    {navItems.map((navItem, index) => (
+                        <li key={index}>
+                            <a href={navItem.url} >{navItem.label}</a>
+                        </li>
+                    ))}
 
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
+
     )
 }
 
