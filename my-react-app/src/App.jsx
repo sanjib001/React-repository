@@ -2,9 +2,9 @@
 import Header from './components/header'
 import Button from './components/button'
 import Counter from './components/counter'
-import Input from './components/input'
 import Logo from './components/logo'
 import Navbar from './components/navbar'
+import Form from './components/form'
 import "./index.css"
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
       <Button>Sign In</Button>
       <Button>Sign Up</Button>
       <Counter />
-      <Input />
+      <Form />
     </>
   )
 }
