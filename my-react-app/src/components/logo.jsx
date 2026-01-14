@@ -8,4 +8,4 @@ const Logo = () => {
 // export default Logo;
 
 //specific export 
-export { Logo };
+export default Logo ;
