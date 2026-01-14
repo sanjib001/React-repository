@@ -1,16 +1,19 @@
-const Navbar = () => {
+const Navbar = (props) => {
+    // const navItems = [
+    //     { url: "/home", label: "Home" },
+    //     { url: "/about", label: "About" },
+    //     { url: "/contact", label: "Contact" }
+    // ]
+    const { navItems } = props;
     return (
         <nav>
-            <ul style={{display: "flex", listStyle: "none"}}>
-                <li>
-                    <a href="#" style={{color:"white"}}>Home</a>
-                </li>
-                <li>
-                    <a href="#" style={{color:"white"}}>About</a>
-                </li>
-                <li>
-                    <a href="#" style={{color:"white"}}>Contact</a>
-                </li>
+            <ul style={{ display: "flex", listStyle: "none" }}>
+                {navItems.map((navItem, index) => (
+                    <li key={index}>
+                        <a href={navItem.url} style={{ color: "white" }}>{navItem.label}</a>
+                    </li>
+                ))}
+
             </ul>
         </nav>
     )

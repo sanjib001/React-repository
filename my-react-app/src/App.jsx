@@ -13,12 +13,19 @@ function App() {
     address: "Kumripati"
   }
 
+  const navItems = [
+    { url: "/home", label: "Home" },
+    { url: "/about", label: "About" },
+    { url: "/contact", label: "Contact" }
+  ]
+
   return (
     <>
       <Header
         logo={<Logo />}
-        navbar={<Navbar />}
-        organization={organization} />
+        navbar={<Navbar navItems={navItems} />}
+        organization={organization}
+      />
       {/* <Button name="SignUp" />
       <Button name="SignIn" /> */}
       <Button>Sign In</Button>
