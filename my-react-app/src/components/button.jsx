@@ -20,10 +20,10 @@
 // }
 
 const Button = (porps) => {
-    const { children } = porps;
+    const { children, onClick } = porps;
     //children is reserved word
     return (
-        <button>{children}</button>
+        <button onClick={onClick}>{children}</button>
     )
 }
 

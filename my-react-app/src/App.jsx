@@ -22,15 +22,15 @@ function App() {
 
   return (
     <>
-      <Header
+      {/* <Header
         logo={<Logo />}
         navbar={<Navbar navItems={navItems} />}
         organization={organization}
-      />
+      /> */}
       {/* <Button name="SignUp" />
       <Button name="SignIn" /> */}
-      <Button>Sign In</Button>
-      <Button>Sign Up</Button>
+      {/* <Button>Sign In</Button>
+      <Button>Sign Up</Button> */}
       <Counter />
       <Form />
     </>
