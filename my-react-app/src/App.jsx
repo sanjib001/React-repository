@@ -6,6 +6,7 @@ import Logo from './components/logo'
 import Navbar from './components/navbar'
 import Form from './components/form'
 import "./index.css"
+import Wine from './components/partials/wine'
 
 function App() {
 
@@ -31,8 +32,12 @@ function App() {
       <Button name="SignIn" /> */}
       {/* <Button>Sign In</Button>
       <Button>Sign Up</Button> */}
-      <Counter />
-      <Form />
+      {/* <Counter />
+      <Form /> */}
+      <main>
+        <Wine />
+      </main>
+
     </>
   )
 }

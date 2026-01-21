@@ -62,3 +62,8 @@ button:focus-visible {
 .danger{
   color: red;
 }
+
+.main{
+  padding: 20px 40px;
+  margin: 20px;
+}
