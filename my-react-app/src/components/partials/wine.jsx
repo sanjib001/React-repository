@@ -3,6 +3,8 @@ import "./wine.css"
 
 const Wine = () => {
     const [wines, setWines] = useState([]);
+    // If state changes, component rerenders.  
+    // If rerender changes state then infinite loop occurs.
 
     const getWines = async () => {
         const url = "https://api.sampleapis.com/wines/reds";
@@ -13,8 +15,10 @@ const Wine = () => {
                 "content-type": "Application/json"
             }
         })
+
+        // Backend => json data to string => FE => String data to json. 
         const result = await response.json();
-        setWines(result);
+        setWines(result); // Change in state which triggers rerender. 
         console.log("rerender");
     }
     //getWines(); Get wine, which chnages the state.
@@ -24,7 +28,7 @@ const Wine = () => {
         getWines();
     }, [])
     //Dependency array
-
+    // useEffect will run again when the variable inside dependency array will change.
     return (
         <>
             <h1 className="component-title">List of wines: </h1>

@@ -7,6 +7,7 @@ import Navbar from './components/navbar'
 import Form from './components/form'
 import "./index.css"
 import Wine from './components/partials/wine'
+import Coffee from './components/partials/coffee'
 
 function App() {
 
@@ -35,7 +36,8 @@ function App() {
       {/* <Counter />
       <Form /> */}
       <main>
-        <Wine />
+        {/* <Wine /> */}
+        <Coffee/>
       </main>
 
     </>
