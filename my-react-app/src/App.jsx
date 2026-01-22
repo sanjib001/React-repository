@@ -1,37 +1,21 @@
-// import './App.css'
 import "./index.css"
-import Header from "./components/layouts/header"
-import Wine from './components/partials/wine'
-import Coffee from './components/partials/coffee'
+import HomePage from "./pages/homepage"
+import WinePage from "./pages/winepage"
+import CoffeePage from "./pages/coffeepage"
+import ErrorPage from "./pages/errorpage"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
-  const organization = {
-    name: "Tech axis",
-    address: "Kumripati"
-  }
-
-  const navItems = [
-    { url: "/home", label: "Home" },
-    { url: "/about", label: "About" },
-    { url: "/contact", label: "Contact" }
-  ]
-
   return (
-    <>
-    <Header/>
-      {/* <Button name="SignUp" />
-      <Button name="SignIn" /> */}
-      {/* <Button>Sign In</Button>
-      <Button>Sign Up</Button> */}
-      {/* <Counter />
-      <Form /> */}
-      <main>
-        <Wine />
-        {/* <Coffee/> */}
-      </main>
-
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/wine" element={<WinePage />} />
+        <Route path="/coffee" element={<CoffeePage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,9 +1,11 @@
-const NavItem = (porps) => {
-    const {key, path, label} = porps;
+import { NavLink } from "react-router-dom";
+
+const NavItem = (props) => {
+    const { path, label } = props;
 
     return (
         <li>
-            <a href={path} key={key} >{label}</a>
+            <NavLink to={path} >{label}</NavLink>
         </li>
     )
 }
