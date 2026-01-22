@@ -1,11 +1,6 @@
 // import './App.css'
-import Header from './components/header'
-import Button from './components/button'
-import Counter from './components/counter'
-import Logo from './components/logo'
-import Navbar from './components/navbar'
-import Form from './components/form'
 import "./index.css"
+import Header from "./components/layouts/header"
 import Wine from './components/partials/wine'
 import Coffee from './components/partials/coffee'
 
@@ -24,11 +19,7 @@ function App() {
 
   return (
     <>
-      {/* <Header
-        logo={<Logo />}
-        navbar={<Navbar navItems={navItems} />}
-        organization={organization}
-      /> */}
+    <Header/>
       {/* <Button name="SignUp" />
       <Button name="SignIn" /> */}
       {/* <Button>Sign In</Button>
@@ -36,8 +27,8 @@ function App() {
       {/* <Counter />
       <Form /> */}
       <main>
-        {/* <Wine /> */}
-        <Coffee/>
+        <Wine />
+        {/* <Coffee/> */}
       </main>
 
     </>
