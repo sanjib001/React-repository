@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./wine.css"
+import { Link } from "react-router-dom";
 
 const Wine = () => {
     const [wines, setWines] = useState([]);
@@ -35,10 +36,11 @@ const Wine = () => {
             <div className="list">
                 {wines && wines.length > 0 && wines.map((wine, index) => (
                     <div className="list-item" key={index}>
+                        <Link to= {`/wine/${wine.id}`}>
                         <div className="thumbnail">
                             <img src={wine.image} alt={wine.wine} />
                         </div>
-                        <div className="decription">
+                        <div className="description">
                             <h3>{wine.wine}</h3>
                             <div className="meta">
                                 <span>Location: </span>{wine.location}
@@ -50,6 +52,7 @@ const Wine = () => {
                                 <span>Rating Reviews: </span>{wine.rating?.reviews}
                             </div>
                         </div>
+                        </Link>
                     </div>
                 ))}
             </div >
